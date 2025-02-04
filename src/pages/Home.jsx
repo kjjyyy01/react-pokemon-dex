@@ -1,12 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const StDiv = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-`;
-
 const StImg = styled.img`
   width: 600px;
   height: 300px;
@@ -32,7 +26,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <StDiv>
+    <div>
       <StImg src="/image/pokemon-logo-img.png" alt="포켓몬 로고" />
       <StButton
         onClick={() => {
@@ -41,7 +35,7 @@ const Home = () => {
       >
         도감 시작하기
       </StButton>
-    </StDiv>
+    </div>
   );
 };
 

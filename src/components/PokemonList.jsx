@@ -1,23 +1,24 @@
 import styled from "styled-components";
+import PokemonCard from "./PokemonCard";
+import MOCK_DATA from "../../data/Mock_Data";
+import { Link } from "react-router-dom";
 
-const StMain = styled.main`
-  background-color: #f8f8f8;
-`;
-const StUl = styled.ul`
-  background-color: green;
+const StLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;
 
 const PokemonList = () => {
   return (
-    <StMain>
-      <StUl>
-        <li>
-          <h3>포켓몬 이름</h3>
-          <p>번호</p>
-          <button>추가</button>
-        </li>
-      </StUl>
-    </StMain>
+    <main>
+      <ul>
+        {MOCK_DATA.map((data) => (
+          <StLink to="/detail" key={data.id}>
+            <PokemonCard data={data} />
+          </StLink>
+        ))}
+      </ul>
+    </main>
   );
 };
 
