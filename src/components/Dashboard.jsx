@@ -1,15 +1,39 @@
-import styled from "styled-components";
-
-const StHeader = styled.header`
-  background-color: orange;
-`;
+const data = [
+  {
+    img_path: "/image/monsterBall-img.png",
+  },
+  {
+    img_path: "/image/monsterBall-img.png",
+  },
+  {
+    img_path: "/image/monsterBall-img.png",
+  },
+  {
+    img_path: "/image/monsterBall-img.png",
+  },
+  {
+    img_path: "/image/monsterBall-img.png",
+  },
+  {
+    img_path: "/image/monsterBall-img.png",
+  },
+];
 
 const Dashboard = () => {
   return (
     <>
-      <StHeader>
+      <header>
         <h1>나만의 포켓몬 도감</h1>
-      </StHeader>
+        <ul>
+          {data.map((element) => {
+            return (
+              <li key={element.img_path}>
+                <img src="/image/monsterBall-img.png" alt="" />
+              </li>
+            );
+          })}
+        </ul>
+      </header>
     </>
   );
 };
