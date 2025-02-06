@@ -4,8 +4,13 @@ import reset from "styled-reset";
 const GlobalStyle = createGlobalStyle`
     ${reset}
 
+    html {
+        font-family: "Jua", serif;
+    }
+
     * {
         box-sizing: border-box;
+        font-family: "Jua", serif;
     }
 
     html,body,#root {
