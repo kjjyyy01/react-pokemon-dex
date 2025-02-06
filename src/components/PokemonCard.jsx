@@ -8,10 +8,11 @@ const StLink = styled(Link)`
 
 const PokemonCard = ({ pokemon }) => {
   return (
-    <StLink to="/detail">
+    //* MOCK_DATA에서 하나씩 순회한 포켓몬 id를 pid로 설정
+    <StLink to={`/detail?pokemon=${pokemon.id}`}>
       <img src={pokemon.img_url} alt={pokemon.korean_name} />
       <h3>{pokemon.korean_name}</h3>
-      <p>{pokemon.id}</p>
+      <p>No.{pokemon.id.toString().padStart(3, "0")}</p>
     </StLink>
   );
 };
