@@ -1,13 +1,18 @@
-const PokemonCard = ({ data }) => {
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const StLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
+const PokemonCard = ({ pokemon }) => {
   return (
-    <>
-      <li>
-        <img src={data.img_url} alt="포켓몬 캐릭터 이미지" />
-        <h3>{data.korean_name}</h3>
-        <p>No.0{data.id}</p>
-        <button>추가</button>
-      </li>
-    </>
+    <StLink to="/detail">
+      <img src={pokemon.img_url} alt={pokemon.korean_name} />
+      <h3>{pokemon.korean_name}</h3>
+      <p>{pokemon.id}</p>
+    </StLink>
   );
 };
 
