@@ -1,10 +1,4 @@
-import styled from "styled-components";
 import PokemonCard from "./PokemonCard";
-
-const StTitle = styled.h1`
-  font-size: 2rem;
-  color: #cd3939;
-`;
 
 const Dashboard = ({ selectedPokemon, setSelectedPokemon }) => {
   const pokemonBallCount = 6 - selectedPokemon.length;
@@ -15,7 +9,7 @@ const Dashboard = ({ selectedPokemon, setSelectedPokemon }) => {
 
   return (
     <header>
-      <StTitle>나만의 포켓몬 도감</StTitle>
+      <h1>나만의 포켓몬 도감</h1>
       <ul>
         {selectedPokemon.map((pokemon) => (
           <li key={pokemon.id}>
