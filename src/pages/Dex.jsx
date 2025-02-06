@@ -4,7 +4,6 @@ import PokemonList from "../components/PokemonList";
 
 const Dex = () => {
   const [selectedPokemon, setSelectedPokemon] = useState([]);
-
   return (
     <>
       <Dashboard selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} />
