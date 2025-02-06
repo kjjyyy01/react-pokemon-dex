@@ -31,6 +31,12 @@ const GlobalStyle = createGlobalStyle`
     ul, li {
         list-style: none;
     }
+
+    #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export default GlobalStyle;
