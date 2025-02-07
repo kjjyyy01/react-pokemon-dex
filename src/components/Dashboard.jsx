@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { PokemonContext } from "../context/PokemonContext";
 
 const StDashboardUl = styled.ul`
   display: flex;
@@ -7,7 +9,9 @@ const StDashboardUl = styled.ul`
   align-items: center;
 `;
 
-const Dashboard = ({ selectedPokemon, setSelectedPokemon }) => {
+const Dashboard = () => {
+  const { selectedPokemon, setSelectedPokemon } = useContext(PokemonContext);
+
   const pokemonBallCount = 6 - selectedPokemon.length;
 
   const cancelPokemon = (id) => {

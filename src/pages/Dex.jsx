@@ -1,14 +1,13 @@
-import { useState } from "react";
 import Dashboard from "../components/Dashboard";
 import PokemonList from "../components/PokemonList";
+import { PokemonProvider } from "../context/PokemonContext";
 
 const Dex = () => {
-  const [selectedPokemon, setSelectedPokemon] = useState([]);
   return (
-    <>
-      <Dashboard selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} />
-      <PokemonList selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} />
-    </>
+    <PokemonProvider>
+      <Dashboard />
+      <PokemonList />
+    </PokemonProvider>
   );
 };
 

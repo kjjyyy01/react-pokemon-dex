@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { PokemonContext } from "../context/PokemonContext";
 
-const PokemonCard = ({ pokemon, selectedPokemon, setSelectedPokemon, MOCK_DATA }) => {
+const PokemonCard = ({ pokemon, MOCK_DATA }) => {
+  const { selectedPokemon, setSelectedPokemon } = useContext(PokemonContext);
+
   const addPokemon = (id) => {
     if (selectedPokemon.length >= 6) {
       alert("최대 6마리까지 추가할 수 있습니다.");
