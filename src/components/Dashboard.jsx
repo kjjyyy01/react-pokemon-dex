@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import PokemonCard from "./PokemonCard";
 
-const StTitle = styled.h1`
-  font-size: 2rem;
-  color: #cd3939;
+const StDashboardUl = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Dashboard = ({ selectedPokemon, setSelectedPokemon }) => {
@@ -15,11 +16,15 @@ const Dashboard = ({ selectedPokemon, setSelectedPokemon }) => {
 
   return (
     <header>
-      <StTitle>나만의 포켓몬 도감</StTitle>
-      <ul>
+      <StDashboardUl>
+        <h1>나만의 포켓몬 도감</h1>
         {selectedPokemon.map((pokemon) => (
           <li key={pokemon.id}>
-            <PokemonCard pokemon={pokemon} />
+            <Link to={`/detail?pokemon=${pokemon.id}`}>
+              <img src={pokemon.img_url} alt={pokemon.korean_name} />
+              <h3>{pokemon.korean_name}</h3>
+              <p>No.{pokemon.id.toString().padStart(3, "0")}</p>
+            </Link>
             <button onClick={() => cancelPokemon(pokemon.id)}>취소</button>
           </li>
         ))}
@@ -32,7 +37,7 @@ const Dashboard = ({ selectedPokemon, setSelectedPokemon }) => {
                 <img src="/image/monsterBall-img.png" alt="빈 포켓볼" />
               </li>
             ))}
-      </ul>
+      </StDashboardUl>
     </header>
   );
 };
