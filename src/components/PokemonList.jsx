@@ -9,18 +9,12 @@ const StListUl = styled.ul`
   align-items: center;
 `;
 
-const PokemonList = ({ selectedPokemon, setSelectedPokemon }) => {
+const PokemonList = () => {
   return (
     <main>
       <StListUl>
         {MOCK_DATA.map((pokemon) => (
-          <PokemonCard
-            key={pokemon.id}
-            pokemon={pokemon}
-            selectedPokemon={selectedPokemon}
-            setSelectedPokemon={setSelectedPokemon}
-            MOCK_DATA={MOCK_DATA}
-          />
+          <PokemonCard key={pokemon.id} pokemon={pokemon} MOCK_DATA={MOCK_DATA} />
         ))}
       </StListUl>
     </main>
