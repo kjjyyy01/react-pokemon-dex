@@ -20,6 +20,7 @@ export const StTitle = styled.h1`
 export const StDashboardUl = styled.ul`
   width: 100%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 `;
@@ -30,7 +31,7 @@ export const StCard = styled.li`
   padding: 50px 80px;
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
