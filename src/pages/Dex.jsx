@@ -1,13 +1,14 @@
+import { Provider } from "react-redux";
 import Dashboard from "../components/Dashboard";
 import PokemonList from "../components/PokemonList";
-import { PokemonProvider } from "../context/PokemonContext";
+import store from "../redux/config/store";
 
 const Dex = () => {
   return (
-    <PokemonProvider>
+    <Provider store={store}>
       <Dashboard />
       <PokemonList />
-    </PokemonProvider>
+    </Provider>
   );
 };
 
