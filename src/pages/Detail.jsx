@@ -1,5 +1,13 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import MOCK_DATA from "../../data/Mock_Data";
+import {
+  StCardName,
+  StDetailDescription,
+  StDetailImg,
+  StDetailWrapper,
+  StListButton,
+  StType,
+} from "../components/Style";
 
 const Detail = () => {
   const navigate = useNavigate();
@@ -14,19 +22,19 @@ const Detail = () => {
   //* 추출한 객체로 Detail화면에 렌더링
   const pokemon = MOCK_DATA.find((data) => data.id.toString() === id);
   return (
-    <>
-      <img src={pokemon.img_url} alt={pokemon.korean_name} />
-      <h3>{pokemon.korean_name}</h3>
-      <p>{pokemon.types}</p>
-      <p>{pokemon.description}</p>
-      <button
+    <StDetailWrapper>
+      <StDetailImg src={pokemon.img_url} alt={pokemon.korean_name} />
+      <StCardName>{pokemon.korean_name}</StCardName>
+      <StType>속성: {pokemon.types}</StType>
+      <StDetailDescription>{pokemon.description}</StDetailDescription>
+      <StListButton
         onClick={() => {
           navigate("/dex");
         }}
       >
         뒤로가기
-      </button>
-    </>
+      </StListButton>
+    </StDetailWrapper>
   );
 };
 
