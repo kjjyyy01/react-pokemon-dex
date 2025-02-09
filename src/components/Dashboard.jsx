@@ -10,7 +10,6 @@ const StDashboardUl = styled.ul`
 `;
 
 const Dashboard = () => {
-  // const { selectedPokemon, setSelectedPokemon } = useContext(PokemonContext);
   const dispatch = useDispatch();
   const selectedPokemon = useSelector((state) => state.pokemon);
 
