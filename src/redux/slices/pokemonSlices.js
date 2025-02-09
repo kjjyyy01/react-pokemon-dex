@@ -18,7 +18,6 @@ const pokemonSlice = createSlice({
         alert("이미 추가된 포켓몬입니다!");
         return;
       }
-      console.log(state);
       return [...state, pokemon];
     },
     cancelPokemon: (state, action) => {
