@@ -1,13 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { cancelPokemon } from "../redux/slices/pokemonSlices";
-
-const StDashboardUl = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+import {
+  StCard,
+  StCardName,
+  StCardNumber,
+  StDashboardUl,
+  StHeader,
+  StImg,
+  StLink,
+  StListButton,
+  StTitle,
+} from "./Style";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -16,18 +19,18 @@ const Dashboard = () => {
   const pokemonBallCount = 6 - selectedPokemon.length;
 
   return (
-    <header>
+    <StHeader>
+      <StTitle>나만의 포켓몬 도감</StTitle>
       <StDashboardUl>
-        <h1>나만의 포켓몬 도감</h1>
         {selectedPokemon.map((pokemon) => (
-          <li key={pokemon.id}>
-            <Link to={`/detail?pokemon=${pokemon.id}`}>
-              <img src={pokemon.img_url} alt={pokemon.korean_name} />
-              <h3>{pokemon.korean_name}</h3>
-              <p>No.{pokemon.id.toString().padStart(3, "0")}</p>
-            </Link>
-            <button onClick={() => dispatch(cancelPokemon(pokemon.id))}>취소</button>
-          </li>
+          <StCard key={pokemon.id}>
+            <StLink to={`/detail?pokemon=${pokemon.id}`}>
+              <StImg src={pokemon.img_url} alt={pokemon.korean_name} />
+              <StCardName>{pokemon.korean_name}</StCardName>
+              <StCardNumber>No.{pokemon.id.toString().padStart(3, "0")}</StCardNumber>
+            </StLink>
+            <StListButton onClick={() => dispatch(cancelPokemon(pokemon.id))}>취소</StListButton>
+          </StCard>
         ))}
 
         {pokemonBallCount > 0 &&
@@ -35,11 +38,11 @@ const Dashboard = () => {
             .fill(null)
             .map((_, index) => (
               <li key={`${index}`}>
-                <img src="/image/monsterBall-img.png" alt="빈 포켓볼" />
+                <StImg src="/image/monsterBall-img.png" alt="빈 포켓볼" />
               </li>
             ))}
       </StDashboardUl>
-    </header>
+    </StHeader>
   );
 };
 
