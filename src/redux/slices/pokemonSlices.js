@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const initialState = [];
 
@@ -10,12 +11,12 @@ const pokemonSlice = createSlice({
       const pokemon = action.payload;
 
       if (state.length >= 6) {
-        alert("최대 6마리까지 추가할 수 있습니다.");
+        toast.warn("최대 6마리까지 추가할 수 있습니다.");
         return;
       }
 
       if (state.find((poke) => poke.id === pokemon.id)) {
-        alert("이미 추가된 포켓몬입니다!");
+        toast.warn("이미 추가된 포켓몬입니다!");
         return;
       }
       return [...state, pokemon];
