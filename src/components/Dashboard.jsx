@@ -1,7 +1,7 @@
-import { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { PokemonContext } from "../context/PokemonContext";
+import { cancelPokemon } from "../redux/slices/pokemonSlices";
 
 const StDashboardUl = styled.ul`
   display: flex;
@@ -10,13 +10,11 @@ const StDashboardUl = styled.ul`
 `;
 
 const Dashboard = () => {
-  const { selectedPokemon, setSelectedPokemon } = useContext(PokemonContext);
+  // const { selectedPokemon, setSelectedPokemon } = useContext(PokemonContext);
+  const dispatch = useDispatch();
+  const selectedPokemon = useSelector((state) => state.pokemon);
 
   const pokemonBallCount = 6 - selectedPokemon.length;
-
-  const cancelPokemon = (id) => {
-    setSelectedPokemon(selectedPokemon.filter((pokemon) => pokemon.id !== id));
-  };
 
   return (
     <header>
@@ -29,7 +27,7 @@ const Dashboard = () => {
               <h3>{pokemon.korean_name}</h3>
               <p>No.{pokemon.id.toString().padStart(3, "0")}</p>
             </Link>
-            <button onClick={() => cancelPokemon(pokemon.id)}>취소</button>
+            <button onClick={() => dispatch(cancelPokemon(pokemon.id))}>취소</button>
           </li>
         ))}
 
