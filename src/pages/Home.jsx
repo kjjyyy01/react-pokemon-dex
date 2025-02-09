@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
     <HomeWrapper>
-      <PokemonLogo src="/image/pokemon-logo-img.png" alt="포켓몬 로고" />
+      <PokemonLogo src="/public/pokemon-logo-img.png" alt="포켓몬 로고" />
       <StartDexButton
         onClick={() => {
           navigate("/dex");

@@ -38,7 +38,7 @@ const Dashboard = () => {
             .fill(null)
             .map((_, index) => (
               <li key={`${index}`}>
-                <StImg src="/image/monsterBall-img.png" alt="빈 포켓볼" />
+                <StImg src="/public/monsterBall-img.png" alt="빈 포켓볼" />
               </li>
             ))}
       </StDashboardUl>
