@@ -1,10 +1,12 @@
 import { Bounce, ToastContainer } from "react-toastify";
 import GlobalStyle from "./components/GlobalStyle";
 import Router from "./shared/Router";
+import { Provider } from "react-redux";
+import store from "./redux/config/store";
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyle />
       <Router />
       <ToastContainer
@@ -18,7 +20,7 @@ const App = () => {
         theme="light"
         transition={Bounce}
       />
-    </>
+    </Provider>
   );
 };
 
