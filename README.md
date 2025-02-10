@@ -59,33 +59,31 @@ https://react-pokemon-dex-black.vercel.app/
 ```
 📁
 pokemon-dex
-├─ data
+├─ 📁data
 │  └─ Mock_Data.js
-├─ public
+├─ 📁public
 │  ├─ monsterBall-img.png
 │  ├─ pokemon-logo-img.png
 │  └─ website-logo.png
-├─ src
+├─ 📁src
 │  ├─ main.jsx
 │  ├─ App.jsx
-│  ├─ assets
-│  │  └─ react.svg
-│  ├─ components
+│  ├─ 📁components
 │  │  ├─ Dashboard.jsx
 │  │  ├─ GlobalStyle.jsx
 │  │  ├─ PokemonCard.jsx
 │  │  ├─ PokemonList.jsx
 │  │  └─ Style.jsx
-│  ├─ pages
+│  ├─ 📁pages
 │  │  ├─ Detail.jsx
 │  │  ├─ Dex.jsx
 │  │  └─ Home.jsx
-│  ├─ redux
-│  │  ├─ config
+│  ├─ 📁redux
+│  │  ├─ 📁config
 │  │  │  └─ store.js
-│  │  └─ slices
+│  │  └─ 📁slices
 │  │     └─ pokemonSlices.js
-│  └─ shared
+│  └─ 📁shared
 │     └─ Router.jsx
 ├─ index.html
 ├─ README.md
