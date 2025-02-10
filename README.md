@@ -50,7 +50,8 @@ https://react-pokemon-dex-black.vercel.app/
 
 ## 🤔 트러블 슈팅
 
--
+- eslint 설정 2가지! (https://velog.io/@kjjyyy01/%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85-eslint-%EC%84%A4%EC%A0%95-2%EA%B0%80%EC%A7%80)
+
 
 <br />
 
