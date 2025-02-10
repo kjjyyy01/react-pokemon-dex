@@ -7,7 +7,7 @@ export const StHeader = styled.header`
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin-top: 30px;
+  margin: 30px 0;
   border-radius: 10px;
 `;
 
