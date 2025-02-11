@@ -13,6 +13,10 @@ import { addPokemon } from "../redux/slices/pokemonSlices";
 import { toast } from "react-toastify";
 import { usePokemonStorage } from "../hooks/usePokemonStorage";
 
+//* Detail에서 추가버튼을 누르면 대시보드에 추가할 수 있는 기능을 구현했다.
+//* navigate를 사용해 Dex페이지로 되돌아 갈 수 있게 구현했다.
+//* useSearchParams를 사용해 queryString에 들어갈 id 값을 추출해
+//* MOCK_DATA에 있는 id와 비교하여 일치하는 것을 화면에 렌더링했습니다.
 const Detail = () => {
   usePokemonStorage();
   const navigate = useNavigate();

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//* 모든 styled-components들을 모아둔 컴포넌트 입니다.
 export const StHeader = styled.header`
   background-color: #ffc76d;
   display: flex;

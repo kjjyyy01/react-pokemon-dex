@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
+//* 전역 스타일링이 필요한 부분에 스타일을 적용했습니다.
 const GlobalStyle = createGlobalStyle`
     ${reset}
 
