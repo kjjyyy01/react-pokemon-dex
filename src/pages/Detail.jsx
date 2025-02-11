@@ -11,7 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { addPokemon } from "../redux/slices/pokemonSlices";
 import { toast } from "react-toastify";
-import { usePokemonStorage } from "../components/hooks/usePokemonStorage";
+import { usePokemonStorage } from "../hooks/usePokemonStorage";
 
 const Detail = () => {
   usePokemonStorage();
