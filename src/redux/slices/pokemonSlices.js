@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { loadPokemonFromStorage } from "../../utils/localStorage";
 
-const initialState = [];
+const initialState = loadPokemonFromStorage();
 
 const pokemonSlice = createSlice({
   name: "pokemon",
