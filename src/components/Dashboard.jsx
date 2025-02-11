@@ -12,6 +12,7 @@ import {
   StTitle,
 } from "./Style";
 
+//* 추가 버튼을 눌러 추가한 포켓몬으로 몬스터볼이미지를 대체하는 로직을 작성했습니다.
 const Dashboard = () => {
   const dispatch = useDispatch();
   const selectedPokemon = useSelector((state) => state.pokemon);

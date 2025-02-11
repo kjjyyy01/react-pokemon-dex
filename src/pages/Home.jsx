@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { HomeWrapper, PokemonLogo, StartDexButton } from "../components/Style";
 
+//* useNavigate를 통해 Home에서 Dex로 이동하게 설정했다.
 const Home = () => {
   const navigate = useNavigate();
 
