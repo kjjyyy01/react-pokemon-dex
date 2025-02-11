@@ -4,6 +4,8 @@ import { StCard, StCardName, StCardNumber, StImg, StLink, StListButton } from ".
 import { toast } from "react-toastify";
 import { usePokemonStorage } from "../hooks/usePokemonStorage";
 
+//* 추가 버튼을 누르면 추가되는 로직을 dispatch를 통해 구현했고
+//* useSelector를 통해 추가된 포켓몬 개수(길이)를 파악해 유효성 검사를 진행했습니다.
 const PokemonCard = ({ pokemon }) => {
   usePokemonStorage();
   const dispatch = useDispatch();
