@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addPokemon } from "../redux/slices/pokemonSlices";
 import { StCard, StCardName, StCardNumber, StImg, StLink, StListButton } from "./Style";
 import { toast } from "react-toastify";
-import { usePokemonStorage } from "./hooks/usePokemonStorage";
+import { usePokemonStorage } from "../hooks/usePokemonStorage";
 
 const PokemonCard = ({ pokemon }) => {
   usePokemonStorage();
