@@ -128,9 +128,8 @@ export const StDetailWrapper = styled.div`
 `;
 
 export const StDetailImg = styled.img`
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: fill;
+  width: 400px;
+  height: 400px;
 `;
 
 export const StDetailDescription = styled.p`

@@ -18,7 +18,7 @@ https://react-pokemon-dex-black.vercel.app/
 
 ![Image](https://github.com/user-attachments/assets/e0521b4e-f212-4201-a849-adfc55f708c6)
 ![Image](https://github.com/user-attachments/assets/7862bb9c-4d62-4520-915f-0fe7c1fd926b)
-![Image](https://github.com/user-attachments/assets/4eb5022a-7fef-456e-a347-b9e2f91b7aa1)
+![Image](https://github.com/user-attachments/assets/940babee-66f9-4245-a88a-7f2bacedab09)
 <br />
 
 ## 📄 기능 소개
